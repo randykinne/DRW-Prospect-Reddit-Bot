@@ -2,6 +2,8 @@ import praw
 import time
 import json
 import os.path
+import twitter
+from datetime import datetime
 
 def readConfig():
 
@@ -37,15 +39,22 @@ def main():
 
 	redditInfo = config['Reddit'][0]
 
-	bot = praw.Reddit(user_agent=redditInfo['username'],
+	reddit = praw.Reddit(user_agent=redditInfo['username'],
 			client_id=redditInfo["client_id"],
 			client_secret=redditInfo["client_secret"],
 			username=redditInfo["username"],
 			password=redditInfo["password"])
 
-	subreddit = bot.subreddit('DetroitRedWings')
+	twitterInfo = config['Twitter'][0]
+	twitterApi = twitter.Api(consumer_key=twitterInfo['consumer_key'],
+		consumer_secret=twitterInfo['consumer_secret'],
+		access_token_key=twitterInfo['access_key'],
+		access_token_secret=twitterInfo['access_secret'])
+
+
+	subreddit = reddit.subreddit('DetroitRedWings')
 	print()
-	print(bot.user.me())
+	print(reddit.user.me())
 	print()
 	time.sleep(1)
 
@@ -54,5 +63,15 @@ def main():
 	 		#submission.reply("Test")
 	 		print("Found submission titled: " + submission.title)
 
-main()
+	updates = twitterApi.GetUserTimeline(screen_name='DRWProspects', count=10)
 
+	message = {}
+	for x in updates:
+		d = datetime.strptime(x.created_at,'%a %b %d %H:%M:%S %z %Y');
+		if (d.date() == datetime.today().date()):
+			print(x.created_at, x.text)
+			message.append(x.text)
+
+	
+
+main()
