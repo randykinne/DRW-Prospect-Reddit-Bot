@@ -11,4 +11,4 @@ This is a twitter subreddit bot written in [Python](https://www.python.org/). It
 Check out [u/DRWProspectBot on Reddit](https://www.reddit.com/u/drwprospectbot).
 
 ## License
-Licensed under the [Mozilla Public License 2.0](LICENSE.md).
+Licensed under the [GNU General Public License v3.0](LICENSE).
