@@ -65,13 +65,17 @@ def main():
 
 	updates = twitterApi.GetUserTimeline(screen_name='DRWProspects', count=10)
 
-	message = {}
+	message = ("TEST\n")
 	for x in updates:
 		d = datetime.strptime(x.created_at,'%a %b %d %H:%M:%S %z %Y');
 		if (d.date() == datetime.today().date()):
-			print(x.created_at, x.text)
-			message.append(x.text)
+			message = message + (x.text + "\n\n").replace("#RedWings", " ")
 
+	message = message + "I am a bot and this action was performed automatically. More information can be found at [My GitHub](https://github.com/randykinne/DRW-Prospect-Reddit-Bot)"
+	message = message + "\nData Source: https://twitter.com/DRWProspects"
+	print(message)
+	submission.reply(message)
+	print("Message posted on Reddit.")
 	
 
 main()
