@@ -60,19 +60,18 @@ def main():
 
 	for submission in subreddit.hot(limit=2):
 		if (submission.author == "OctoMod"):
-	 		#submission.reply("Test")
 	 		print("Found submission titled: " + submission.title)
 
 	updates = twitterApi.GetUserTimeline(screen_name='DRWProspects', count=10)
 
-	message = ("TEST\n")
+	message = ("Yesterday's Results:\n")
 	for x in updates:
 		d = datetime.strptime(x.created_at,'%a %b %d %H:%M:%S %z %Y');
 		if (d.date() == datetime.today().date()):
 			message = message + (x.text + "\n\n").replace("#RedWings", " ")
 
 	message = message + "I am a bot and this action was performed automatically. More information can be found at [My GitHub](https://github.com/randykinne/DRW-Prospect-Reddit-Bot)"
-	message = message + "\nData Source: https://twitter.com/DRWProspects"
+	message = message + "\n\nData Source: https://twitter.com/DRWProspects"
 	print(message)
 	submission.reply(message)
 	print("Message posted on Reddit.")
