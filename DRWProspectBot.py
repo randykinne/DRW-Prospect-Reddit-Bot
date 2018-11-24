@@ -49,7 +49,8 @@ def main():
 	twitterApi = twitter.Api(consumer_key=twitterInfo['consumer_key'],
 		consumer_secret=twitterInfo['consumer_secret'],
 		access_token_key=twitterInfo['access_key'],
-		access_token_secret=twitterInfo['access_secret'])
+		access_token_secret=twitterInfo['access_secret'],
+		tweet_mode='extended')
 
 
 	subreddit = reddit.subreddit('DetroitRedWings')
@@ -68,7 +69,7 @@ def main():
 	for x in updates:
 		d = datetime.strptime(x.created_at,'%a %b %d %H:%M:%S %z %Y');
 		if (d.date() == datetime.today().date()):
-			message = message + (x.text + "\n\n").replace("#RedWings", " ")
+			message = message + (str(x.full_text) + "\n\n").replace("#RedWings", " ")
 
 	message = message + "I am a bot and this action was performed automatically. More information can be found at [My GitHub](https://github.com/randykinne/DRW-Prospect-Reddit-Bot)"
 	message = message + "\n\nData Source: https://twitter.com/DRWProspects"
