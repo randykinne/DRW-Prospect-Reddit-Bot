@@ -4,7 +4,7 @@ This is a twitter subreddit bot written in [Python](https://www.python.org/). It
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for different purposes. See ###Use### for notes on how to use the bot.
 
 ### Prerequisites
 
@@ -40,7 +40,11 @@ In Terminal or Command Prompt, run the following command in the directory of the
 python3 DRWProspectBot.py
 ```
 
-If the config.json file doesn't exist yet, it will be generated. Replace each 'x' with the correct values to log into Reddit and Twitter, then run the previous command again. If everything was installed correctly, the program should state the correctly found Reddit thread, as well as list all of the tweets found, and then post the tweets found to the reddit thread.
+If the config.json file doesn't exist yet, it will be generated. 
+
+Replace each 'x' with the correct values to log into Reddit and Twitter, then run the previous command again. If everything was installed correctly, the program should state the correctly found Reddit thread, as well as list all of the tweets found, and then post the tweets found to the reddit thread.
+
+This command/program will need to be ran again each time it is used.
 
 ## Adjustment/Repurpose
 
