@@ -1,13 +1,10 @@
 # DRW Prospect Reddit Bot
-
 This is a twitter subreddit bot written in [Python](https://www.python.org/). It currently adds all daily posts from _DRWProspects_ twitter account into a single post to the Detroit Red Wings subreddit's daily discussion or game day thread post.
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for different purposes. See ###Use### for notes on how to use the bot.
+These instructions will get you a copy of the project up and running on your local machine for different purposes. See *Use* section for notes on how to use the bot.
 
 ### Prerequisites
-
 You will need to have [Python 3.6+](https://www.python.org/downloads/), [PRAW](https://praw.readthedocs.io/en/latest/getting_started/installation.html), and [python-twitter](https://python-twitter.readthedocs.io/en/latest/installation.html)
 
 ***If you've just installed Python3, pip3 will be included but might not be up-to-date. Update it by running the command:
@@ -29,11 +26,9 @@ pip3 install python-twitter
 ```
 
 ### Installing
-
 Clone or download the respository.
 
 ## Use
-
 In Terminal or Command Prompt, run the following command in the directory of the repo:
 
 ```
@@ -47,7 +42,6 @@ Replace each 'x' with the correct values to log into Reddit and Twitter, then ru
 This command/program will need to be ran again each time it is used.
 
 ## Adjustment/Repurpose
-
 The program is currently configured for the specific purpose of posting information about Detroit Red Wings prospects onto the [r/DetroitRedWings](reddit.com/r/DetroitRedWings) subreddit daily post. 
 
 ***There are future plans to change adjustment options to config.json rather than hardcode, but this is currently not the case.***
