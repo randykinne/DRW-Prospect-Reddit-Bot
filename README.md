@@ -84,16 +84,17 @@ message = ("Yesterday's Results:\n")
 ```
 
 ## Contributing
-
 Feel free to contribute. When submitting pull requests, include details on changes made.
+
+## Future Plans
+- Changing data source information from hardcode to config.json to make program more usable for a variety of purposes
+- Adding prompts for user confirmation for various events in the program to allow user to ensure that the bot is operating correctly
 
 ## Examples
 Check out [u/DRWProspectBot on Reddit](https://www.reddit.com/u/drwprospectbot).
 
 ## Authors
-
 * **Randy Kinne** - *All Work* - [randykinne](https://github.com/randykinne)
 
 ## License
-
 Licensed under the [GNU General Public License v3.0](LICENSE).
