@@ -50,7 +50,7 @@ This command/program will need to be ran again each time it is used.
 
 The program is currently configured for the specific purpose of posting information about Detroit Red Wings prospects onto the [r/DetroitRedWings](reddit.com/r/DetroitRedWings) subreddit daily post. 
 
-***There are future plans to change adjustment options to config.json rather than hardcode, but this is currently not the case..***
+***There are future plans to change adjustment options to config.json rather than hardcode, but this is currently not the case.***
 
 To use for another purpose, open DRWProspectBot.py in your favorite editor and edit the following:
 
