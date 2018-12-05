@@ -32,7 +32,7 @@ Clone or download the respository.
 In Terminal or Command Prompt, run the following command in the directory of the repo:
 
 ```
-python3 DRWProspectBot.py
+python3 bot.py
 ```
 
 If the config.json file doesn't exist yet, it will be generated. 
@@ -46,7 +46,7 @@ The program is currently configured for the specific purpose of posting informat
 
 ***There are future plans to change adjustment options to config.json rather than hardcode, but this is currently not the case.***
 
-To use for another purpose, open DRWProspectBot.py in your favorite editor and edit the following:
+To use for another purpose, open bot.py in your favorite editor and edit the following:
 
 Change the name of the subreddit:
 ```
