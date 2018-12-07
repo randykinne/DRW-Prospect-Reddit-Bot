@@ -1,6 +1,8 @@
 # DRW Prospect Reddit Bot
 This is a twitter subreddit bot written in [Python](https://www.python.org/). It currently adds all daily posts from _DRWProspects_ twitter account into a single post to the Detroit Red Wings subreddit's daily discussion or game day thread post.
 
+# THIS PROJECT WILL NO LONGER BE UPDATED. SEE [twitter-subreddit-bot](https://github.com/randykinne/twitter-subreddit-bot)
+
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for different purposes. See *Use* section for notes on how to use the bot.
 
